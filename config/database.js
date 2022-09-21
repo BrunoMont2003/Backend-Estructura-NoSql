@@ -16,7 +16,12 @@ db.on('disconnected', () => {
 });
 
 const init = () => {
-  mongoose.connect(config.database.uri);
+  try{
+    console.log(config.database.uri);
+    mongoose.connect(config.database.uri);
+  }catch(e){
+    console.error('Error al intentar conectar a la base de datos 😡');
+  }
 };
 
 export default init;
