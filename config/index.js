@@ -1,17 +1,20 @@
-import dotenv from 'dotenv';
+import dotenv from 'dotenv'
 
-dotenv.config();
+dotenv.config()
 
 const config = {
   server: {
-    port: 3000,
+    port: 3000
   },
   database: {
-    uri: process.env.DB_URI,
+    uri: process.env.DB_URI
+  },
+  app: {
+    url: process.env.APP_URL
   },
   security: {
-    attempts: 5,
-  },
-};
+    attempts: 5
+  }
+}
 
-export default config;
+export default config

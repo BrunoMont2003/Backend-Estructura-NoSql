@@ -1,30 +1,30 @@
-import mongoose from 'mongoose';
-import config from './index.js';
+import mongoose from 'mongoose'
+import config from './index.js'
 
-const db = mongoose.connection;
+const db = mongoose.connection
 
 db.on('connecting', () => {
-  console.info('Intentando conectar a la base de datos 🟨');
-});
+  console.info('Intentando conectar a la base de datos 🟨')
+})
 
 db.on('connected', () => {
-  console.log('Se ha conectado a la base de datos 🟩');
-});
+  console.log('Se ha conectado a la base de datos 🟩')
+})
 
 db.on('disconnected', () => {
-  console.error('Se ha desconectado de la base de datos 🟥');
-});
+  console.error('Se ha desconectado de la base de datos 🟥')
+})
 
 const init = () => {
-  try{
-    console.log(config.database.uri);
-    mongoose.connect(config.database.uri);
-  }catch(e){
-    console.error('Error al intentar conectar a la base de datos 😡');
+  try {
+    console.log(config.database.uri)
+    mongoose.connect(config.database.uri)
+  } catch (e) {
+    console.error('Error al intentar conectar a la base de datos 😡')
   }
-};
+}
 
-export default init;
+export default init
 
 /**
  * Eventos:
