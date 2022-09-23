@@ -1,2 +1,3 @@
 import createBookValidator from './createBookValidator.js'
-export { createBookValidator }
+import authValidator from './authValidator.js'
+export { createBookValidator, authValidator }

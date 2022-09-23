@@ -1,3 +1,4 @@
 import * as bookController from './bookController.js'
 import * as authorController from './authorController.js'
-export { bookController, authorController }
+import * as authController from './authController.js'
+export { bookController, authorController, authController }

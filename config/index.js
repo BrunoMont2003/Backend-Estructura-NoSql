@@ -13,7 +13,10 @@ const config = {
     url: process.env.APP_URL
   },
   security: {
-    attempts: 5
+    token: {
+      secret: process.env.TOKEN_SECRET,
+      expiresIn: '1d'
+    }
   }
 }
 

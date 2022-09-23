@@ -1,4 +1,4 @@
 import Book from './Book.js'
 import Author from './Author.js'
-
-export { Book, Author }
+import User from './User.js'
+export { Book, Author, User }
